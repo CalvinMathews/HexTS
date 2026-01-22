@@ -1,0 +1,70 @@
+<div class="register-page-container">
+  <!-- Left Panel: Image -->
+  <div class="image-panel">
+
+    <img src="https://img.freepik.com/premium-vector/admin-concept-illustration_114360-2248.jpg" alt="Regoster">
+  </div>
+
+  <!-- Right Panel: Form -->
+  <div class="form-panel">
+    <div class="form-card">
+      <div class="logo">Hex<span class="logo-light">TS</span></div>
+      <h2>Create Your Account</h2>
+
+
+      <form (ngSubmit)="onSubmit()" #registerForm="ngForm">
+        <div class="form-group">
+          <label for="name">Full Name</label>
+          <input type="text" id="name" name="name" [(ngModel)]="form.name" required #name="ngModel" placeholder="Enter your name">
+          <div *ngIf="name.invalid && (name.dirty || name.touched)" class="input-error-msg">Name is required.</div>
+        </div>
+  
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="email" [(ngModel)]="form.email" required email #email="ngModel" placeholder="Enter email address">
+          <div *ngIf="email.invalid && (email.dirty || email.touched)" class="input-error-msg">
+            <div *ngIf="email.errors?.['required']">Email is required.</div>
+            <div *ngIf="email.errors?.['email']">Please enter a valid email.</div>
+          </div>
+        </div>
+  
+              <div class="form-group">
+        <label for="password">Password</label>
+
+        <!-- 1. Add this wrapper div -->
+        <div class="password-wrapper">
+          <!-- 2. Change the input's type dynamically -->
+          <input 
+            [type]="showPassword ? 'text' : 'password'" 
+            id="password" 
+            name="password" 
+            [(ngModel)]="form.password"
+            required
+            #password="ngModel"
+            placeholder="Enter your password">
+          
+          <!-- 3. Add the clickable icon -->
+          <span class="password-toggle-icon" (click)="togglePasswordVisibility()">
+            {{ showPassword ? 'Hide' : 'Show' }}
+          </span>
+        </div>
+
+        <!-- Validation message remains the same -->
+        <div *ngIf="password.invalid && (password.dirty || password.touched)" class="input-error-msg">
+          <div *ngIf="password.errors?.['required']">Password is required.</div>
+        </div>
+      </div>
+
+  
+        <button type="submit" class="form-btn register-btn" [disabled]="registerForm.invalid">Create Account</button>
+      </form>
+  
+      <div *ngIf="errorMessage" class="error-banner">{{ errorMessage }}</div>
+      <div *ngIf="successMessage" class="success-banner">{{ successMessage }}</div>
+  
+      <div class="form-link">
+        <span>Already have an account? </span><a routerLink="/login">Log In</a>
+      </div>
+    </div>
+  </div>
+</div>

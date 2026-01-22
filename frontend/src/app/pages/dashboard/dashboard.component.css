@@ -1,0 +1,439 @@
+/* src/app/pages/dashboard/dashboard.component.css */
+
+.dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.dashboard-header h2 {
+    margin: 0;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #343a40;
+}
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 700px;
+    position: relative;
+    max-height: 80vh;
+    overflow-y: auto;
+    animation: slideInFromTop 0.4s ease-out;
+}
+
+.modal-close-btn {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #6c757d;
+}
+
+@keyframes slideInFromTop {
+    from { transform: translateY(-30px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+.action-btn {
+    padding: 0.6rem 1rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    text-decoration: none;
+}
+
+.create-btn {
+    background-color: #0056b3; /* Same blue as login */
+}
+
+.create-btn:hover {
+    background-color: #004494;
+}
+
+.create-ticket-card {
+    margin-bottom: 2rem;
+    animation: fadeInForm 0.5s ease-out;
+}
+
+.loading-state {
+    text-align: center;
+    padding: 3rem;
+    color: #6c757d;
+    font-size: 1.1rem;
+}
+/* --- Admin control bar --- */
+.admin-control-bar {
+  margin-top: 1rem;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  background: #f8f9fa;
+  padding: 0.75rem 1rem;
+  border: 1px solid #e9ecef;
+  border-radius: 6px;
+}
+
+.admin-control-bar .field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  min-width: 160px;
+}
+
+.admin-control-bar label {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: .04em;
+  color: #6c757d;
+  font-weight: 600;
+}
+
+.admin-control-bar select {
+  padding: .35rem .5rem;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  background: #fff;
+}
+
+/* --- Create Ticket modal modern form --- */
+.ticket-create-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.ticket-create-form .form-row {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.ticket-create-form label {
+  font-weight: 500;
+  color: #495057;
+}
+/* --- Admin controls bar --- */
+.admin-controls-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  align-items: flex-end;
+  background: #f8f9fa;
+  border: 1px solid #dee2e6;
+  border-radius: 8px;
+  padding: 1rem 1.2rem;
+  margin: 1rem 0 1.5rem;
+}
+
+.admin-controls-bar .control-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.admin-controls-bar label {
+  font-size: 0.8rem;
+  color: #495057;
+  margin-bottom: 0.3rem;
+  font-weight: 500;
+}
+
+.styled-select {
+  padding: 0.4rem 0.8rem;
+  border: 1px solid #ced4da;
+  border-radius: 6px;
+  background: white;
+  font-size: 0.9rem;
+  transition: all 0.2s ease;
+}
+
+.styled-select:focus {
+  border-color: #0056b3;
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(0, 86, 179, 0.2);
+}
+
+.save-btn {
+  background-color: #0056b3;
+  font-weight: 600;
+}
+
+.save-btn:hover {
+  background-color: #00408f;
+}
+
+/* --- Ticket meta styling --- */
+.ticket-meta span {
+  font-size: 0.9rem;
+  color: #495057;
+}
+
+.ticket-meta strong {
+  color: #212529;
+}
+
+/* --- Status and priority badges --- */
+.ticket-tags {
+  margin-top: 0.8rem;
+  display: flex;
+  gap: 0.6rem;
+}
+
+.ticket-tags .status,
+.ticket-tags .priority {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  border-radius: 20px;
+  text-transform: capitalize;
+}
+
+.status.new {
+  background-color: #dbeafe;
+  color: #1e40af;
+}
+
+.status.assigned,
+.status.inprogress {
+  background-color: #fff3cd;
+  color: #856404;
+}
+
+.status.resolved {
+  background-color: #d1fae5;
+  color: #065f46;
+}
+
+.status.closed {
+  background-color: #f8d7da;
+  color: #842029;
+}
+
+.priority.low {
+  background-color: #e2e3e5;
+  color: #495057;
+}
+
+.priority.medium {
+  background-color: #cfe2ff;
+  color: #084298;
+}
+
+.priority.high {
+  background-color: #f8d7da;
+  color: #842029;
+}
+
+
+.ticket-create-form input,
+.ticket-create-form select,
+.ticket-create-form textarea {
+  border: 1px solid #ced4da;
+  border-radius: 6px;
+  padding: 0.5rem 0.6rem;
+  font-size: 0.9rem;
+}
+.agent-controls-bar {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  background: #f1f5f9;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 0.6rem 0.9rem;
+  margin-top: 0.8rem;
+  max-width: 280px;
+}
+
+.agent-controls-bar .control-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.agent-controls-bar label {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: #64748b;
+  font-weight: 500;
+}
+
+.agent-controls-bar .styled-select {
+  padding: 0.35rem 0.6rem;
+  border-radius: 6px;
+  border: 1px solid #cbd5e1;
+  background: #fff;
+  font-size: 0.85rem;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+.action-btn {
+  background: #0056b3;
+  color: #fff;
+}
+
+.action-btn:hover {
+  background: #00408f;
+}
+.ticket-create-form textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.ticket-create-form .form-actions {
+  display: flex;
+  gap: 0.75rem;
+  justify-content: flex-end;
+}
+
+/* --- Detail View Styles --- */
+
+.back-link {
+    display: inline-block;
+    margin-bottom: 1.5rem;
+    color: #0056b3;
+    font-weight: 500;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.back-link:hover {
+    text-decoration: underline;
+}
+
+.detail-container h1 {
+    font-size: 1.8rem;
+    margin-top: 0;
+}
+.ticket-header {
+  border-bottom: 1px solid #e9ecef;
+  padding-bottom: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.ticket-header h1 {
+  font-size: 1.8rem;
+  margin: 0;
+  color: #343a40;
+}
+
+.ticket-id {
+  font-size: 1.2rem;
+  color: #6c757d;
+  font-weight: 400;
+}
+
+.ticket-meta {
+  display: flex;
+  gap: 1.5rem;
+  font-size: 0.9rem;
+  color: #6c757d;
+  margin-top: 1rem;
+}
+
+.ticket-tags {
+  margin-top: 1.5rem;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.ticket-body h3, .ticket-comments h3 {
+  font-size: 1.2rem;
+  color: #343a40;
+  margin-bottom: 1rem;
+}
+
+.ticket-body p {
+  line-height: 1.6;
+  color: #495057;
+}
+
+.comment-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.comment-card {
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  padding: 1rem;
+  border: 1px solid #e9ecef;
+}
+
+.comment-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.comment-header strong {
+  color: #0056b3;
+}
+
+.comment-date {
+  color: #6c757d;
+}
+
+.comment-message {
+  margin: 0;
+  line-height: 1.5;
+  color: #495057;
+}
+
+.close-btn {
+    background-color: #dc3545; /* Red */
+    margin-left: auto;
+}
+.close-btn:hover {
+    background-color: #c82333;
+}
+.ticket-group {
+    margin-bottom: 2.5rem;
+}
+
+.group-title {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #495057;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid #dee2e6;
+}
+
+/* Add keyframes if they are not already global */
+@keyframes fadeInForm {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}

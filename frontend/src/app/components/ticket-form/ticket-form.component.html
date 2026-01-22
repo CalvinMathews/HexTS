@@ -1,0 +1,19 @@
+<form (ngSubmit)="onSubmit()" #ticketForm="ngForm" class="ticket-form">
+  <div class="form-group">
+    <label for="title">Title</label>
+    <input type="text" name="title" [(ngModel)]="ticket.title" required>
+  </div>
+  <div class="form-group">
+    <label for="priority">Priority</label>
+    <select name="priority" [(ngModel)]="ticket.priority" required>
+      <option>Low</option>
+      <option>Medium</option>
+      <option>High</option>
+    </select>
+  </div>
+  <div class="form-group">
+    <label for="description">Description</label>
+    <textarea name="description" [(ngModel)]="ticket.description" required rows="5"></textarea>
+  </div>
+  <button type="submit" class="form-btn" [disabled]="ticketForm.invalid">Submit Ticket</button>
+</form>

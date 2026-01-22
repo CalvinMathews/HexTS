@@ -1,0 +1,87 @@
+/* src/app/components/ticket-list/ticket-list.component.css */
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+.ticket-card {
+    background: #fff;
+    border-radius: 8px;
+    padding: 1rem;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    border-left: 5px solid #ccc; /* Default border color */
+}
+
+.ticket-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+/* --- Color coding based on status --- */
+.ticket-card.status-new { border-left-color: #007bff; }
+.ticket-card.status-assigned { border-left-color: #ffc107; }
+.ticket-card.status-inprogress { border-left-color: #fd7e14; }
+.ticket-card.status-resolved { border-left-color: #28a745; }
+.ticket-card.status-closed { border-left-color: #6c757d; }
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.75rem;
+}
+
+.card-id {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #6c757d;
+}
+
+.priority {
+  padding: 0.25rem 0.5rem;
+  border-radius: 15px;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+.priority.low { background-color: #e6f7ff; color: #006fbb; }
+.priority.medium { background-color: #fffbe6; color: #d48806; }
+.priority.high { background-color: #fff1f0; color: #f5222d; }
+
+.card-title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #343a40;
+    margin: 0 0 0.5rem 0;
+    /* Truncate long titles */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.card-creator {
+    font-size: 0.9rem;
+    color: #6c757d;
+    margin: 0 0 1rem 0;
+}
+
+.card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.85rem;
+    color: #6c757d;
+}
+
+.card-status {
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.no-data-message {
+  text-align: center;
+  padding: 3rem;
+  color: #6c757d;
+}

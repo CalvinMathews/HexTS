@@ -1,0 +1,119 @@
+<div class="admin-users-page">
+  <!-- top -->
+  <div class="top-bar">
+    <div>
+      <h2>User Management</h2>
+      <p class="subtitle">Users Active Directory</p>
+    </div>
+    <input
+      type="text"
+      [(ngModel)]="searchTerm"
+      (input)="filterUsers()"
+      placeholder="Search name, email, role..."
+      class="search-input" />
+  </div>
+
+  <div *ngIf="isLoading" class="loading-state">Loading users...</div>
+  <div *ngIf="errorMessage" class="error-banner">{{ errorMessage }}</div>
+
+  <div class="users-grid" *ngIf="!isLoading && !errorMessage">
+    <!-- left -->
+    <div class="users-list">
+      <div class="users-list-header">
+        <span>Name</span>
+        <span>Email</span>
+        <span>Role</span>
+        <span>Status</span>
+      </div>
+
+      <div
+        *ngFor="let u of filteredUsers"
+        class="user-row"
+        [class.active]="selectedUser?.userId === u.userId"
+        (click)="selectUser(u)">
+        <span class="user-name">{{ u.name }}</span>
+        <span class="user-email">{{ u.email }}</span>
+        <span><span class="role-pill" [ngClass]="u.role.toLowerCase()">{{ u.role }}</span></span>
+        <span><span class="status-pill" [ngClass]="u.isActive ? 'active' : 'inactive'">{{ u.isActive ? 'Active' : 'Inactive' }}</span></span>
+      </div>
+    </div>
+
+    <!-- right -->
+    <div class="user-panel" *ngIf="selectedUser; else emptyRight">
+      <div class="panel-header">
+        <div>
+          <h3>{{ selectedUser.name }}</h3>
+          <p class="muted">{{ selectedUser.email }}</p>
+        </div>
+        <button class="delete-btn" (click)="deleteUser()">Delete</button>
+      </div>
+
+      <div class="meta-row">
+        <div>
+          <h5>User ID</h5>
+          <p>#{{ selectedUser.userId }}</p>
+        </div>
+        <div>
+          <h5>Role</h5>
+          <p>{{ selectedUser.role }}</p>
+        </div>
+        <div>
+          <h5>Status</h5>
+          <p>
+            <span class="status-pill" [ngClass]="selectedUser.isActive ? 'active' : 'inactive'">
+              {{ selectedUser.isActive ? 'Active' : 'Inactive' }}
+            </span>
+          </p>
+        </div>
+      </div>
+
+      <div class="form-card">
+        <h4>Change Role</h4>
+        <div class="inline-form">
+          <select [(ngModel)]="selectedRole">
+            <option *ngFor="let r of availableRoles" [value]="r">{{ r }}</option>
+          </select>
+          <button class="primary-btn" (click)="saveRole()">Save</button>
+        </div>
+      </div>
+
+      <div class="form-card">
+        <h4>Set Status</h4>
+        <div class="inline-form">
+          <select [(ngModel)]="selectedStatus">
+            <option value="Active">Active</option>
+            <option value="Inactive">Inactive</option>
+          </select>
+          <button class="secondary-btn" (click)="saveStatus()">Update</button>
+        </div>
+      </div>
+
+      <!-- Tickets raised -->
+      <div class="tickets-card">
+        <h4>Tickets raised by this user</h4>
+        <p *ngIf="ticketsRaised.length === 0" class="muted">No tickets found.</p>
+        <ul *ngIf="ticketsRaised.length > 0">
+          <li *ngFor="let t of ticketsRaised">
+            <span class="t-title">{{ t.title }}</span>
+            <span class="t-meta">{{ t.status }} • #{{ t.ticketId }}</span>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Tickets assigned (for agents) -->
+      <div class="tickets-card" *ngIf="ticketsAssigned.length > 0">
+        <h4>Tickets assigned to this agent</h4>
+        <ul>
+          <li *ngFor="let t of ticketsAssigned">
+            <span class="t-title">{{ t.title }}</span>
+            <span class="t-meta">{{ t.status }} • #{{ t.ticketId }}</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <ng-template #emptyRight>
+      <div class="user-panel empty">Select a user to view details.</div>
+    </ng-template>
+  </div>
+</div>

@@ -1,0 +1,233 @@
+/* bring everything inside */
+.admin-users-page {
+  max-width: 1180px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.subtitle {
+  color: #6c757d;
+  margin-top: .25rem;
+  font-size: .85rem;
+}
+
+.search-input {
+  min-width: 250px;
+  padding: .4rem .6rem;
+  border: 1px solid #ced4da;
+  border-radius: 6px;
+  background: #fff;
+}
+
+.users-grid {
+  display: grid;
+  grid-template-columns: 0.55fr 0.45fr;
+  gap: 1rem;
+  min-height: 420px;
+}
+
+.users-list {
+  background: #fff;
+  border: 1px solid #e9ecef;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.users-list-header {
+  display: grid;
+  grid-template-columns: 1.1fr 1.1fr .6fr .5fr;
+  gap: .5rem;
+  padding: .6rem 1rem;
+  background: #f8f9fa;
+  font-weight: 600;
+  font-size: .78rem;
+  color: #495057;
+}
+
+.user-row {
+  display: grid;
+  grid-template-columns: 1.1fr 1.1fr .6fr .5fr;
+  gap: .5rem;
+  padding: .55rem 1rem;
+  border-bottom: 1px solid #f1f3f5;
+  align-items: center;
+  cursor: pointer;
+  transition: background .15s;
+}
+
+.user-row:hover {
+  background: #f8f9fa;
+}
+
+.user-row.active {
+  background: #e7f1ff;
+}
+
+.user-name {
+  font-weight: 500;
+}
+
+.user-email {
+  font-size: .73rem;
+  color: #6c757d;
+}
+
+.role-pill,
+.status-pill {
+  display: inline-block;
+  padding: .2rem .55rem;
+  border-radius: 999px;
+  font-size: .7rem;
+  font-weight: 500;
+}
+
+.role-pill.customer {
+  background: #e2e3e5;
+  color: #495057;
+}
+.role-pill.supportagent {
+  background: #cff4fc;
+  color: #055160;
+}
+.role-pill.admin {
+  background: #ffe5d9;
+  color: #8a3b12;
+}
+
+.status-pill.active {
+  background: #d1e7dd;
+  color: #0f5132;
+}
+.status-pill.inactive {
+  background: #f8d7da;
+  color: #842029;
+}
+
+.user-panel {
+  background: #fff;
+  border: 1px solid #e9ecef;
+  border-radius: 8px;
+  padding: 1rem 1.4rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.user-panel.empty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #6c757d;
+}
+
+.panel-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.muted {
+  color: #6c757d;
+  font-size: .8rem;
+}
+
+.delete-btn {
+  background: #dc3545;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: .3rem .7rem;
+  cursor: pointer;
+}
+
+.meta-row {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.meta-row h5 {
+  margin: 0 0 .3rem;
+  font-size: .65rem;
+  text-transform: uppercase;
+  letter-spacing: .04em;
+  color: #6c757d;
+}
+
+.form-card,
+.tickets-card {
+  background: #f8f9fa;
+  border: 1px solid #e9ecef;
+  border-radius: 8px;
+  padding: .7rem .8rem;
+}
+
+.form-card h4,
+.tickets-card h4 {
+  margin: 0 0 .5rem;
+  font-size: .9rem;
+}
+
+.inline-form {
+  display: flex;
+  gap: .5rem;
+  flex-wrap: wrap;
+}
+
+.inline-form select {
+  padding: .35rem .5rem;
+  border: 1px solid #ced4da;
+  border-radius: 6px;
+  background: #fff;
+}
+
+.primary-btn {
+  background: #0056b3;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: .35rem .75rem;
+  cursor: pointer;
+}
+.primary-btn:hover {
+  background: #00408f;
+}
+
+.secondary-btn {
+  background: #e9ecef;
+  border: none;
+  border-radius: 6px;
+  padding: .35rem .75rem;
+  cursor: pointer;
+}
+
+.tickets-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: .35rem;
+}
+
+.tickets-card li {
+  display: flex;
+  justify-content: space-between;
+  font-size: .8rem;
+}
+
+.t-title {
+  font-weight: 500;
+}
+.t-meta {
+  color: #6c757d;
+  font-size: .7rem;
+}

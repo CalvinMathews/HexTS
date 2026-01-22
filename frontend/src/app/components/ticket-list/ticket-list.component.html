@@ -1,0 +1,27 @@
+<div class="list-container">
+  <!-- (We can add a view toggle here later if needed) -->
+
+  <!-- CARD VIEW -->
+  <div class="card-grid">
+    <div *ngFor="let ticket of tickets" 
+         class="ticket-card" 
+         [ngClass]="'status-' + ticket.status.toLowerCase()"
+         (click)="selectTicket(ticket.ticketId)">
+      
+      <div class="card-header">
+        <span class="card-id">#{{ ticket.ticketId }}</span>
+        <span class="priority" [ngClass]="ticket.priority.toLowerCase()">{{ ticket.priority }}</span>
+      </div>
+      <h4 class="card-title">{{ ticket.title }}</h4>
+      <p class="card-creator">Created by: {{ ticket.creatorName }}</p>
+      <div class="card-footer">
+        <span class="card-date">{{ ticket.createdDate | date: 'shortDate' }}</span>
+        <span class="card-status">{{ ticket.status }}</span>
+      </div>
+    </div>
+  </div>
+
+  <div *ngIf="tickets.length === 0" class="no-data-message">
+    <p>No tickets to display.</p>
+  </div>
+</div>

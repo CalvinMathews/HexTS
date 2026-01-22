@@ -1,0 +1,314 @@
+<!-- ================= LIST / MASTER VIEW ================= -->
+<!-- If no ticket is selected, show the dashboard lists -->
+<div *ngIf="!selectedTicket; else detailView">
+
+  <!-- top bar: title + role-based actions -->
+  <div class="dashboard-header">
+    <h2>
+      <!-- admin gets a different heading -->
+      <ng-container *ngIf="isAdmin(); else otherTitle">
+        Admin Dashboard
+      </ng-container>
+      <ng-template #otherTitle>
+        {{ isSupportAgent() ? 'My Workspace' : 'Dashboard' }}
+      </ng-template>
+    </h2>
+
+    <!-- right side buttons -->
+    <div class="header-actions">
+      <!-- admin can go to users page -->
+      <button
+        *ngIf="isAdmin()"
+        class="action-btn"
+        routerLink="/admin/users">
+        Manage Users
+      </button>
+
+      <!-- customer can create ticket -->
+      <button
+        *ngIf="isCustomer()"
+        class="action-btn create-btn"
+        (click)="showCreateForm = true">
+        + Create New Ticket
+      </button>
+    </div>
+  </div>
+
+  <!-- loading / error messages -->
+  <div *ngIf="isLoading" class="loading-state">Loading tickets...</div>
+  <div *ngIf="errorMessage && !isLoading" class="error-banner">
+    {{ errorMessage }}
+  </div>
+
+  <!-- =============== CUSTOMER + ADMIN VIEW =============== -->
+  <div *ngIf="!isSupportAgent() && !isLoading && !errorMessage">
+    <!-- new / unassigned -->
+    <div class="ticket-group">
+      <h3 class="group-title">Unassigned Tickets</h3>
+      <app-ticket-list
+        [tickets]="newTickets"
+        (ticketSelected)="viewTicketDetails($event)">
+      </app-ticket-list>
+    </div>
+
+    <!-- open -->
+    <div class="ticket-group">
+      <h3 class="group-title">In Progress Tickets</h3>
+      <app-ticket-list
+        [tickets]="openTickets"
+        (ticketSelected)="viewTicketDetails($event)">
+      </app-ticket-list>
+    </div>
+
+    <!-- closed -->
+    <div class="ticket-group">
+      <h3 class="group-title">Resolved Tickets</h3>
+      <app-ticket-list
+        [tickets]="closedTickets"
+        (ticketSelected)="viewTicketDetails($event)">
+      </app-ticket-list>
+    </div>
+  </div>
+
+  <!-- =============== AGENT VIEW ONLY =============== -->
+  <div *ngIf="isSupportAgent() && !isLoading && !errorMessage">
+    <!-- work currently being done -->
+    <div class="ticket-group">
+      <h3 class="group-title">In Progress</h3>
+      <app-ticket-list
+        [tickets]="inProgressTickets"
+        (ticketSelected)="viewTicketDetails($event)">
+      </app-ticket-list>
+      <p *ngIf="inProgressTickets.length === 0" class="muted-info">
+      </p>
+    </div>
+
+    <!-- stuff assigned but not started -->
+    <div class="ticket-group">
+      <h3 class="group-title">Assigned to Me</h3>
+      <app-ticket-list
+        [tickets]="assignedTickets"
+        (ticketSelected)="viewTicketDetails($event)">
+      </app-ticket-list>
+      <p *ngIf="assignedTickets.length === 0" class="muted-info">
+
+      </p>
+    </div>
+  </div>
+
+</div>
+<!-- END MASTER VIEW -->
+
+
+<!-- ================= DETAIL VIEW ================= -->
+<ng-template #detailView>
+  <div class="detail-container">
+    <!-- back to lists -->
+    <a (click)="backToList()" class="back-link">&larr; Back to Dashboard</a>
+
+    <!-- loading in detail -->
+    <div *ngIf="isLoading" class="loading-state">Loading ticket details...</div>
+    <div *ngIf="errorMessage && !isLoading" class="error-banner">
+      {{ errorMessage }}
+    </div>
+
+    <!-- actual ticket details -->
+    <div *ngIf="!isLoading && selectedTicket">
+      <div class="ticket-header">
+        <!-- title row -->
+        <div class="ticket-title-row">
+          <h1>
+            {{ selectedTicket.title }}
+            <span class="ticket-id">#{{ selectedTicket.ticketId }}</span>
+          </h1>
+
+          <!-- customer can close their own ticket -->
+          <button
+            *ngIf="isCustomer() && selectedTicket.status !== 'Closed'"
+            (click)="closeTicket()"
+            class="action-btn close-btn">
+            Close Ticket
+          </button>
+
+          <div
+  *ngIf="isSupportAgent() && isMyTicket(selectedTicket)"
+  class="agent-controls-bar">
+  <div class="control-group">
+    <label for="agentStatus">Status</label>
+    <select
+      id="agentStatus"
+      [(ngModel)]="agentSelectedStatus"
+      class="styled-select">
+      <option value="InProgress">In Progress</option>
+      <option value="Resolved">Resolved</option>
+    </select>
+  </div>
+
+  <button
+    class="action-btn save-btn"
+    [disabled]="agentIsSaving"
+    (click)="agentSaveStatus()">
+    {{ agentIsSaving ? 'Saving...' : 'Save' }}
+  </button>
+</div>
+          <!-- admin edit bar -->
+          <div *ngIf="isAdmin()" class="admin-controls-bar">
+            <div class="control-group">
+              <label for="status">Status</label>
+              <select
+                id="status"
+                [(ngModel)]="selectedStatus"
+                name="status"
+                class="styled-select">
+                <option *ngFor="let s of availableStatuses" [value]="s">
+                  {{ s }}
+                </option>
+              </select>
+            </div>
+
+            <div class="control-group">
+              <label for="assign">Assign To</label>
+              <select
+                id="assign"
+                [(ngModel)]="selectedAgentId"
+                name="assignedToId"
+                class="styled-select">
+                <option [ngValue]="null">-- Unassigned --</option>
+                <option *ngFor="let a of agents" [ngValue]="a.userId">
+                  {{ a.name }}
+                </option>
+              </select>
+            </div>
+
+            <button class="action-btn save-btn" (click)="adminSaveChanges()">
+              Save
+            </button>
+          </div>
+        </div>
+
+        <!-- meta info -->
+        <div class="ticket-meta">
+          <span>Created by: <strong>{{ selectedTicket.creatorName }}</strong></span>
+          <span>Assigned to: <strong>{{ selectedTicket.agentName || 'Unassigned' }}</strong></span>
+          <span>Date: <strong>{{ selectedTicket.createdDate | date:'fullDate' }}</strong></span>
+        </div>
+
+        <!-- status + priority tags -->
+        <div class="ticket-tags">
+          <span class="status" [ngClass]="selectedTicket.status.toLowerCase()">
+            {{ selectedTicket.status }}
+          </span>
+          <span class="priority" [ngClass]="selectedTicket.priority.toLowerCase()">
+            {{ selectedTicket.priority }}
+          </span>
+        </div>
+      </div>
+
+      <!-- description -->
+      <div class="ticket-body">
+        <h3>Description</h3>
+        <p>{{ selectedTicket.description }}</p>
+      </div>
+
+      <!-- comments -->
+      <div class="ticket-comments">
+        <h3>Conversation</h3>
+        <div
+          *ngIf="selectedTicket?.comments?.length > 0; else noComments"
+          class="comment-list">
+          <div *ngFor="let comment of selectedTicket.comments" class="comment-card">
+            <div class="comment-header">
+              <strong>{{ comment.authorName }}</strong>
+              <span class="comment-date">{{ comment.createdDate | date:'short' }}</span>
+            </div>
+            <p class="comment-message">{{ comment.message }}</p>
+          </div>
+        </div>
+        <ng-template #noComments>
+          <p>No comments on this ticket yet.</p>
+        </ng-template>
+      </div>
+
+      <!-- add comment -->
+      <div class="add-comment-form">
+        <h4>Add a Reply</h4>
+        <form (ngSubmit)="handleNewComment()">
+          <div class="form-group">
+            <textarea
+              name="newComment"
+              [(ngModel)]="newCommentMessage"
+              rows="4"
+              placeholder="Type your message here..."
+              required>
+            </textarea>
+          </div>
+          <button
+            type="submit"
+            class="form-btn"
+            [disabled]="!newCommentMessage.trim()">
+            Post Comment
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</ng-template>
+
+
+<!-- ================= CREATE TICKET MODAL ================= -->
+<div class="modal-overlay" *ngIf="showCreateForm">
+  <div class="modal-content">
+    <button class="modal-close-btn" (click)="showCreateForm = false">×</button>
+    <h3>New Ticket Details</h3>
+
+    <form
+      (ngSubmit)="handleCreateTicket(ticketForm.value)"
+      #ticketForm="ngForm"
+      class="ticket-create-form">
+
+      <div class="form-row">
+        <label>Title</label>
+        <input
+          name="title"
+          ngModel
+          required
+          placeholder="" />
+      </div>
+
+      <div class="form-row">
+        <label>Priority</label>
+        <select name="priority" ngModel required>
+          <option value="Low">Low</option>
+          <option value="Medium" selected>Medium</option>
+          <option value="High">High</option>
+        </select>
+      </div>
+
+      <div class="form-row">
+        <label>Description</label>
+        <textarea
+          name="description"
+          ngModel
+          rows="5"
+          placeholder="Describe issue"
+          required>
+        </textarea>
+      </div>
+
+      <div class="form-actions">
+        <button
+          type="submit"
+          class="action-btn create-btn"
+          [disabled]="ticketForm.invalid">
+          Create Ticket
+        </button>
+        <button
+          type="button"
+          class="action-btn"
+          (click)="showCreateForm = false">
+          Cancel
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

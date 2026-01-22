@@ -1,0 +1,11 @@
+<nav class="navbar">
+  <div class="navbar-brand">
+    Hex<span class="logo-light">TS</span>
+  </div>
+  <button (click)="logout()" class="logout-btn">Logout</button>
+</nav>
+
+<main class="main-content">
+  <!-- All our authenticated pages (Dashboard, Ticket Details, etc.) will be rendered here -->
+  <router-outlet></router-outlet>
+</main>
