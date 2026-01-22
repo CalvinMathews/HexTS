@@ -1,0 +1,6 @@
+@Hexa_CSTS_HostAddress = http://localhost:5285
+
+GET {{Hexa_CSTS_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

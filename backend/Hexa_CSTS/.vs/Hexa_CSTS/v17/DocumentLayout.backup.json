@@ -1,0 +1,401 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\CSTS\\backend\\Hexa_CSTS\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{97E0F489-5118-4906-B4CA-A6F778BA707C}|Hexa_CSTS.csproj|d:\\csts\\backend\\hexa_csts\\repositories\\iuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{97E0F489-5118-4906-B4CA-A6F778BA707C}|Hexa_CSTS.csproj|solutionrelative:repositories\\iuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{97E0F489-5118-4906-B4CA-A6F778BA707C}|Hexa_CSTS.csproj|d:\\csts\\backend\\hexa_csts\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{97E0F489-5118-4906-B4CA-A6F778BA707C}|Hexa_CSTS.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{97E0F489-5118-4906-B4CA-A6F778BA707C}|Hexa_CSTS.csproj|d:\\csts\\backend\\hexa_csts\\middleware\\middlewareexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{97E0F489-5118-4906-B4CA-A6F778BA707C}|Hexa_CSTS.csproj|solutionrelative:middleware\\middlewareexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{97E0F489-5118-4906-B4CA-A6F778BA707C}|Hexa_CSTS.csproj|d:\\csts\\backend\\hexa_csts\\data\\hexadbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{97E0F489-5118-4906-B4CA-A6F778BA707C}|Hexa_CSTS.csproj|solutionrelative:data\\hexadbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{97E0F489-5118-4906-B4CA-A6F778BA707C}|Hexa_CSTS.csproj|d:\\csts\\backend\\hexa_csts\\repositories\\commentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{97E0F489-5118-4906-B4CA-A6F778BA707C}|Hexa_CSTS.csproj|solutionrelative:repositories\\commentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{97E0F489-5118-4906-B4CA-A6F778BA707C}|Hexa_CSTS.csproj|d:\\csts\\backend\\hexa_csts\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{97E0F489-5118-4906-B4CA-A6F778BA707C}|Hexa_CSTS.csproj|solutionrelative:controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{97E0F489-5118-4906-B4CA-A6F778BA707C}|Hexa_CSTS.csproj|d:\\csts\\backend\\hexa_csts\\dtos\\commentdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{97E0F489-5118-4906-B4CA-A6F778BA707C}|Hexa_CSTS.csproj|solutionrelative:dtos\\commentdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{97E0F489-5118-4906-B4CA-A6F778BA707C}|Hexa_CSTS.csproj|d:\\csts\\backend\\hexa_csts\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{97E0F489-5118-4906-B4CA-A6F778BA707C}|Hexa_CSTS.csproj|solutionrelative:controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{97E0F489-5118-4906-B4CA-A6F778BA707C}|Hexa_CSTS.csproj|d:\\csts\\backend\\hexa_csts\\dtos\\userdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{97E0F489-5118-4906-B4CA-A6F778BA707C}|Hexa_CSTS.csproj|solutionrelative:dtos\\userdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{97E0F489-5118-4906-B4CA-A6F778BA707C}|Hexa_CSTS.csproj|d:\\csts\\backend\\hexa_csts\\dtos\\ticketdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{97E0F489-5118-4906-B4CA-A6F778BA707C}|Hexa_CSTS.csproj|solutionrelative:dtos\\ticketdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{97E0F489-5118-4906-B4CA-A6F778BA707C}|Hexa_CSTS.csproj|d:\\csts\\backend\\hexa_csts\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{97E0F489-5118-4906-B4CA-A6F778BA707C}|Hexa_CSTS.csproj|solutionrelative:controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{97E0F489-5118-4906-B4CA-A6F778BA707C}|Hexa_CSTS.csproj|d:\\csts\\backend\\hexa_csts\\controllers\\ticketcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{97E0F489-5118-4906-B4CA-A6F778BA707C}|Hexa_CSTS.csproj|solutionrelative:controllers\\ticketcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{97E0F489-5118-4906-B4CA-A6F778BA707C}|Hexa_CSTS.csproj|d:\\csts\\backend\\hexa_csts\\repositories\\iticketrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{97E0F489-5118-4906-B4CA-A6F778BA707C}|Hexa_CSTS.csproj|solutionrelative:repositories\\iticketrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{97E0F489-5118-4906-B4CA-A6F778BA707C}|Hexa_CSTS.csproj|d:\\csts\\backend\\hexa_csts\\repositories\\ticketrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{97E0F489-5118-4906-B4CA-A6F778BA707C}|Hexa_CSTS.csproj|solutionrelative:repositories\\ticketrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{97E0F489-5118-4906-B4CA-A6F778BA707C}|Hexa_CSTS.csproj|d:\\csts\\backend\\hexa_csts\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{97E0F489-5118-4906-B4CA-A6F778BA707C}|Hexa_CSTS.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{97E0F489-5118-4906-B4CA-A6F778BA707C}|Hexa_CSTS.csproj|d:\\csts\\backend\\hexa_csts\\repositories\\icommentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{97E0F489-5118-4906-B4CA-A6F778BA707C}|Hexa_CSTS.csproj|solutionrelative:repositories\\icommentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{97E0F489-5118-4906-B4CA-A6F778BA707C}|Hexa_CSTS.csproj|d:\\csts\\backend\\hexa_csts\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{97E0F489-5118-4906-B4CA-A6F778BA707C}|Hexa_CSTS.csproj|solutionrelative:models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{97E0F489-5118-4906-B4CA-A6F778BA707C}|Hexa_CSTS.csproj|d:\\csts\\backend\\hexa_csts\\models\\ticket.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{97E0F489-5118-4906-B4CA-A6F778BA707C}|Hexa_CSTS.csproj|solutionrelative:models\\ticket.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{97E0F489-5118-4906-B4CA-A6F778BA707C}|Hexa_CSTS.csproj|d:\\csts\\backend\\hexa_csts\\models\\comment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{97E0F489-5118-4906-B4CA-A6F778BA707C}|Hexa_CSTS.csproj|solutionrelative:models\\comment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{97E0F489-5118-4906-B4CA-A6F778BA707C}|Hexa_CSTS.csproj|d:\\csts\\backend\\hexa_csts\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{97E0F489-5118-4906-B4CA-A6F778BA707C}|Hexa_CSTS.csproj|solutionrelative:properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{97E0F489-5118-4906-B4CA-A6F778BA707C}|Hexa_CSTS.csproj|d:\\csts\\backend\\hexa_csts\\hexa_csts.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
+      "RelativeMoniker": "D:0:0:{97E0F489-5118-4906-B4CA-A6F778BA707C}|Hexa_CSTS.csproj|solutionrelative:hexa_csts.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{97E0F489-5118-4906-B4CA-A6F778BA707C}|Hexa_CSTS.csproj|d:\\csts\\backend\\hexa_csts\\hexa_csts.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{97E0F489-5118-4906-B4CA-A6F778BA707C}|Hexa_CSTS.csproj|solutionrelative:hexa_csts.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{97E0F489-5118-4906-B4CA-A6F778BA707C}|Hexa_CSTS.csproj|d:\\csts\\backend\\hexa_csts\\migrations\\20251027113141_mig1_cust.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{97E0F489-5118-4906-B4CA-A6F778BA707C}|Hexa_CSTS.csproj|solutionrelative:migrations\\20251027113141_mig1_cust.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 11,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "UserController.cs",
+              "DocumentMoniker": "D:\\CSTS\\backend\\Hexa_CSTS\\Controllers\\UserController.cs",
+              "RelativeDocumentMoniker": "Controllers\\UserController.cs",
+              "ToolTip": "D:\\CSTS\\backend\\Hexa_CSTS\\Controllers\\UserController.cs",
+              "RelativeToolTip": "Controllers\\UserController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEQAAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-30T03:24:31.521Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "CommentRepository.cs",
+              "DocumentMoniker": "D:\\CSTS\\backend\\Hexa_CSTS\\Repositories\\CommentRepository.cs",
+              "RelativeDocumentMoniker": "Repositories\\CommentRepository.cs",
+              "ToolTip": "D:\\CSTS\\backend\\Hexa_CSTS\\Repositories\\CommentRepository.cs",
+              "RelativeToolTip": "Repositories\\CommentRepository.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAowCsAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-30T03:24:31.296Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "HexaDbContext.cs",
+              "DocumentMoniker": "D:\\CSTS\\backend\\Hexa_CSTS\\Data\\HexaDbContext.cs",
+              "RelativeDocumentMoniker": "Data\\HexaDbContext.cs",
+              "ToolTip": "D:\\CSTS\\backend\\Hexa_CSTS\\Data\\HexaDbContext.cs",
+              "RelativeToolTip": "Data\\HexaDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwCoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-27T10:51:11.21Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\CSTS\\backend\\Hexa_CSTS\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "D:\\CSTS\\backend\\Hexa_CSTS\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-27T10:53:39.383Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "MiddlewareException.cs",
+              "DocumentMoniker": "D:\\CSTS\\backend\\Hexa_CSTS\\Middleware\\MiddlewareException.cs",
+              "RelativeDocumentMoniker": "Middleware\\MiddlewareException.cs",
+              "ToolTip": "D:\\CSTS\\backend\\Hexa_CSTS\\Middleware\\MiddlewareException.cs",
+              "RelativeToolTip": "Middleware\\MiddlewareException.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAQwDsAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-30T06:33:27.472Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "TicketDto.cs",
+              "DocumentMoniker": "D:\\CSTS\\backend\\Hexa_CSTS\\Dtos\\TicketDto.cs",
+              "RelativeDocumentMoniker": "Dtos\\TicketDto.cs",
+              "ToolTip": "D:\\CSTS\\backend\\Hexa_CSTS\\Dtos\\TicketDto.cs",
+              "RelativeToolTip": "Dtos\\TicketDto.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAzwBQAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-30T03:24:31.411Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "CommentDto.cs",
+              "DocumentMoniker": "D:\\CSTS\\backend\\Hexa_CSTS\\Dtos\\CommentDto.cs",
+              "RelativeDocumentMoniker": "Dtos\\CommentDto.cs",
+              "ToolTip": "D:\\CSTS\\backend\\Hexa_CSTS\\Dtos\\CommentDto.cs",
+              "RelativeToolTip": "Dtos\\CommentDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-30T06:01:08.475Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "AdminController.cs",
+              "DocumentMoniker": "D:\\CSTS\\backend\\Hexa_CSTS\\Controllers\\AdminController.cs",
+              "RelativeDocumentMoniker": "Controllers\\AdminController.cs",
+              "ToolTip": "D:\\CSTS\\backend\\Hexa_CSTS\\Controllers\\AdminController.cs",
+              "RelativeToolTip": "Controllers\\AdminController.cs",
+              "ViewState": "AgIAAC8AAAAAAAAAAAAgwD4AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-30T06:20:14.83Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "IUserRepository.cs",
+              "DocumentMoniker": "D:\\CSTS\\backend\\Hexa_CSTS\\Repositories\\IUserRepository.cs",
+              "RelativeDocumentMoniker": "Repositories\\IUserRepository.cs",
+              "ToolTip": "D:\\CSTS\\backend\\Hexa_CSTS\\Repositories\\IUserRepository.cs",
+              "RelativeToolTip": "Repositories\\IUserRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-30T03:24:29.425Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "UserDto.cs",
+              "DocumentMoniker": "D:\\CSTS\\backend\\Hexa_CSTS\\Dtos\\UserDto.cs",
+              "RelativeDocumentMoniker": "Dtos\\UserDto.cs",
+              "ToolTip": "D:\\CSTS\\backend\\Hexa_CSTS\\Dtos\\UserDto.cs",
+              "RelativeToolTip": "Dtos\\UserDto.cs",
+              "ViewState": "AgIAACYAAAAAAAAAAAAqwBEAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-30T03:24:31.382Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "TicketController.cs",
+              "DocumentMoniker": "D:\\CSTS\\backend\\Hexa_CSTS\\Controllers\\TicketController.cs",
+              "RelativeDocumentMoniker": "Controllers\\TicketController.cs",
+              "ToolTip": "D:\\CSTS\\backend\\Hexa_CSTS\\Controllers\\TicketController.cs",
+              "RelativeToolTip": "Controllers\\TicketController.cs",
+              "ViewState": "AgIAAMMAAAAAAAAAAAAwwLoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-30T03:24:31.583Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "D:\\CSTS\\backend\\Hexa_CSTS\\Controllers\\AuthController.cs",
+              "RelativeDocumentMoniker": "Controllers\\AuthController.cs",
+              "ToolTip": "D:\\CSTS\\backend\\Hexa_CSTS\\Controllers\\AuthController.cs",
+              "RelativeToolTip": "Controllers\\AuthController.cs",
+              "ViewState": "AgIAAE4AAAAAAAAAAAAqwAMAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-30T03:24:31.493Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "ITicketRepository.cs",
+              "DocumentMoniker": "D:\\CSTS\\backend\\Hexa_CSTS\\Repositories\\ITicketRepository.cs",
+              "RelativeDocumentMoniker": "Repositories\\ITicketRepository.cs",
+              "ToolTip": "D:\\CSTS\\backend\\Hexa_CSTS\\Repositories\\ITicketRepository.cs",
+              "RelativeToolTip": "Repositories\\ITicketRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-30T03:24:31.228Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "TicketRepository.cs",
+              "DocumentMoniker": "D:\\CSTS\\backend\\Hexa_CSTS\\Repositories\\TicketRepository.cs",
+              "RelativeDocumentMoniker": "Repositories\\TicketRepository.cs",
+              "ToolTip": "D:\\CSTS\\backend\\Hexa_CSTS\\Repositories\\TicketRepository.cs",
+              "RelativeToolTip": "Repositories\\TicketRepository.cs",
+              "ViewState": "AgIAAD4AAAAAAAAAAAAAwEAAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-30T03:24:31.269Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\CSTS\\backend\\Hexa_CSTS\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "D:\\CSTS\\backend\\Hexa_CSTS\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAABQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-10-27T10:48:09.339Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "ICommentRepository.cs",
+              "DocumentMoniker": "D:\\CSTS\\backend\\Hexa_CSTS\\Repositories\\ICommentRepository.cs",
+              "RelativeDocumentMoniker": "Repositories\\ICommentRepository.cs",
+              "ToolTip": "D:\\CSTS\\backend\\Hexa_CSTS\\Repositories\\ICommentRepository.cs",
+              "RelativeToolTip": "Repositories\\ICommentRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-30T03:24:31.185Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "User.cs",
+              "DocumentMoniker": "D:\\CSTS\\backend\\Hexa_CSTS\\Models\\User.cs",
+              "RelativeDocumentMoniker": "Models\\User.cs",
+              "ToolTip": "D:\\CSTS\\backend\\Hexa_CSTS\\Models\\User.cs",
+              "RelativeToolTip": "Models\\User.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACAAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-27T09:42:25Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "Ticket.cs",
+              "DocumentMoniker": "D:\\CSTS\\backend\\Hexa_CSTS\\Models\\Ticket.cs",
+              "RelativeDocumentMoniker": "Models\\Ticket.cs",
+              "ToolTip": "D:\\CSTS\\backend\\Hexa_CSTS\\Models\\Ticket.cs",
+              "RelativeToolTip": "Models\\Ticket.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAA2wCYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-27T10:01:09.158Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "Comment.cs",
+              "DocumentMoniker": "D:\\CSTS\\backend\\Hexa_CSTS\\Models\\Comment.cs",
+              "RelativeDocumentMoniker": "Models\\Comment.cs",
+              "ToolTip": "D:\\CSTS\\backend\\Hexa_CSTS\\Models\\Comment.cs",
+              "RelativeToolTip": "Models\\Comment.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-27T10:09:29.018Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "D:\\CSTS\\backend\\Hexa_CSTS\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "Properties\\launchSettings.json",
+              "ToolTip": "D:\\CSTS\\backend\\Hexa_CSTS\\Properties\\launchSettings.json",
+              "RelativeToolTip": "Properties\\launchSettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACcAAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-10-30T09:04:38.588Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "Hexa_CSTS",
+              "DocumentMoniker": "D:\\CSTS\\backend\\Hexa_CSTS\\Hexa_CSTS.csproj",
+              "RelativeDocumentMoniker": "Hexa_CSTS.csproj",
+              "ToolTip": "D:\\CSTS\\backend\\Hexa_CSTS\\Hexa_CSTS.csproj",
+              "RelativeToolTip": "Hexa_CSTS.csproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-10-31T03:58:09.325Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "Hexa_CSTS.csproj",
+              "DocumentMoniker": "D:\\CSTS\\backend\\Hexa_CSTS\\Hexa_CSTS.csproj",
+              "RelativeDocumentMoniker": "Hexa_CSTS.csproj",
+              "ToolTip": "D:\\CSTS\\backend\\Hexa_CSTS\\Hexa_CSTS.csproj",
+              "RelativeToolTip": "Hexa_CSTS.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-10-27T10:50:40.232Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "20251027113141_Mig1_Cust.cs",
+              "DocumentMoniker": "D:\\CSTS\\backend\\Hexa_CSTS\\Migrations\\20251027113141_Mig1_Cust.cs",
+              "RelativeDocumentMoniker": "Migrations\\20251027113141_Mig1_Cust.cs",
+              "ToolTip": "D:\\CSTS\\backend\\Hexa_CSTS\\Migrations\\20251027113141_Mig1_Cust.cs",
+              "RelativeToolTip": "Migrations\\20251027113141_Mig1_Cust.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-27T11:31:41.381Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

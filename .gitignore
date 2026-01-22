@@ -1,0 +1,28 @@
+
+bin/
+obj/
+*.db
+*.mdf
+*.ldf
+*.sqlite
+*.pdb
+*.log
+
+
+appsettings.json
+appsettings.Development.json
+appsettings.Production.json
+appsettings.Local.json
+
+
+node_modules/
+dist/
+.angular/
+.vscode/
+.idea/
+*.log
+*.map
+
+
+# environment.ts
+# environment.prod.ts
