@@ -106,9 +106,7 @@ HexTicketing uses a clear visual priority scheme:
 
 **Tracking**  
 Tickets are automatically grouped into  
-• Unassigned  
-• In Progress  
-• Resolved  
+• Unassigned • In Progress • Resolved  
 
 **Self-Resolution**  
 Users may close their own tickets after the issue is resolved satisfactorily.
